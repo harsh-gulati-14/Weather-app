@@ -4,6 +4,7 @@ const app=express()
 const hbs=require('hbs')
 const geocode=require('./utils/geocode')
 const forecast=require('./utils/forecast')
+const port= process.env.PORT || 3000
 /*console.log(__dirname) // it gives the directory where the file is placed
 console.log(path.join(__dirname,'../public')) // now this is just replicant of __filename and that
 // ../.. is a way to traverse between different file in that same directory and where the filr is saved
@@ -86,7 +87,7 @@ app.get('/help',(req,res)=>{ //same like a serving up different pages
         }
     ])
 })*/
-app.listen(3000,()=>{
-    console.log("SERVER IS UP");
+app.listen(port,()=>{
+    console.log("SERVER IS UP + port");
 })
 
